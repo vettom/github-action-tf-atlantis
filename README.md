@@ -13,10 +13,9 @@ atlantis server \
 --gh-token="$TOKEN" \
 --gh-webhook-secret="$SECRET" \
 --repo-allowlist="$REPO_ALLOWLIST"
-
 ```
 - Create Webhook in Github $URL/events
     - Select permission as per documentation
-
+- Configure Repo
 
     
