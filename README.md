@@ -15,3 +15,8 @@ atlantis server \
 --repo-allowlist="$REPO_ALLOWLIST"
 
 ```
+- Create Webhook in Github $URL/events
+    - Select permission as per documentation
+
+
+    
