@@ -7,6 +7,12 @@
 - Start Atlantis
 
 ```bash
+URL="http://atlantis.vettom.uk"
+USERNAME=<user>
+TOKEN="github_patxxxxxx"
+SECRET=">24 char secret"
+REPO_ALLOWLIST="github.com/vettom/github-action-tf-atlantis"
+
 atlantis server \
 --atlantis-url="$URL" \
 --gh-user="$USERNAME" \
@@ -16,7 +22,13 @@ atlantis server \
 ```
 - Create Webhook in Github $URL/events
     - Select permission as per documentation
-- Configure Repo
+    - Webhook URL <http://atlantis.vettom.uk:4141/events>
 
 
-## Testing trigger
+
+## Atlantis Advanced
+Add a workflow to run additional checks
+- Create repos.yaml and pass it as argument to atlantis
+- Install [tflint](https://github.com/terraform-linters/tflint)
+- configure [tflint plugins](https://github.com/terraform-linters/tflint#getting-started) in .tflint.hcl file
+- Custom config test using [conftest](https://www.conftest.dev/)
