@@ -28,7 +28,19 @@ atlantis server \
 
 ## Atlantis Advanced
 Add a workflow to run additional checks
-- Create repos.yaml and pass it as argument to atlantis
+- Create [repos.yaml](repos_template.md) and pass it as argument to atlantis
 - Install [tflint](https://github.com/terraform-linters/tflint)
 - configure [tflint plugins](https://github.com/terraform-linters/tflint#getting-started) in .tflint.hcl file
 - Custom config test using [conftest](https://www.conftest.dev/)
+
+```bash
+atlantis server \
+--atlantis-url="$URL" \
+--gh-user="$USERNAME" \
+--gh-token="$TOKEN" \
+--gh-webhook-secret="$SECRET" \
+--repo-allowlist="$REPO_ALLOWLIST" \
+--repo-config=./repos.yaml
+
+```
+

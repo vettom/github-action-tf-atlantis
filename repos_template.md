@@ -1,3 +1,6 @@
+# Sample repo
+
+```yaml
 repos:
 - id: /.*/
   apply_requirements: [approved, mergeable]
@@ -11,7 +14,7 @@ workflows:
       steps:
       # - env:
       #     name: VAULT_TOKEN
-      #     command: '/etc/atlantis/vault-helper.sh'
+      #     command: './something.sh'
       - init
       - run: echo "Dir plan" && pwd && ls && echo "-----------------\n"
       - run: echo "Running tflint init..." && tflint -c ./tflint.hcl --init
@@ -23,3 +26,5 @@ workflows:
     apply:
       steps:
       - apply
+```
+
