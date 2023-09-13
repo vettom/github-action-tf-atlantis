@@ -13,7 +13,7 @@ workflows:
       #     name: VAULT_TOKEN
       #     command: '/etc/atlantis/vault-helper.sh'
       - init
-      - echo "Dir plan" && pwd && ls && echo "-----------------\n"
+      - run: echo "Dir plan" && pwd && ls && echo "-----------------\n"
       - run: echo "Running tflint init..." && tflint -c ./tflint.hcl --init
       - run: echo "Running tflint..." && tflint -c ./tflint.hcl
       # - run: echo "Running tfsec..." && tfsec --no-colour --soft-fail --concise-output --minimum-severity MEDIUM
