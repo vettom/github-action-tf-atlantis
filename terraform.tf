@@ -1,4 +1,5 @@
 terraform {
+  required_version = "~> 1.4"
   backend "s3" {
     bucket         = "github-action-aws-tf"
     key            = "github-action-aws-tf/terraform.tfstate"
